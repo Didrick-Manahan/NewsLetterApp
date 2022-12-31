@@ -15,13 +15,15 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <header></header>
-      <nav>
-        <img />
-        <a href="/">Home</a>
-        <a href="/events">Events</a>
-        <a href="/about-us">About Us</a>
-      </nav>
+      <header>
+        <nav>
+          <img />
+          <a href="/">Home</a>
+          <a href="/events">Events</a>
+          <a href="/about-us">About Us</a>
+        </nav>
+      </header>
+
       <main className={styles.main}>
         <a href="">
           <img />
