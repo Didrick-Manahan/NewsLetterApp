@@ -14,7 +14,17 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+      <header></header>
+      <nav>
+        <img />
+        <a href="/">Home</a>
+        <a href="/events">Events</a>
+        <a href="/about-us">About Us</a>
+      </nav>
       <main className={styles.main}></main>
+
+      <footer className={styles.footer}></footer>
     </>
   );
 }
