@@ -27,7 +27,7 @@ export default function Home({ title }) {
       <h1> {title} </h1>
 
       <main className={styles.main}>
-        <a href="">
+        <a href="/events/london">
           <img />
           <h2> Events in London</h2>
           <p>
@@ -40,7 +40,7 @@ export default function Home({ title }) {
             culpa qui officia deserunt mollit anim id est laborum."
           </p>
         </a>
-        <a href="">
+        <a href="/events/san-francisco">
           <img />
           <h2> Events in San Francisco </h2>
           <p>
@@ -53,7 +53,7 @@ export default function Home({ title }) {
             culpa qui officia deserunt mollit anim id est laborum."
           </p>
         </a>
-        <a href="">
+        <a href="/events/barcelona">
           <img />
           <h2> Events in Barcelona</h2>
           <p>

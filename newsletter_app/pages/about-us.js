@@ -1,6 +1,6 @@
 //now we can create a React component here
 
-const Page = () => {
+const AboutUsPage = () => {
   return (
     <div>
       <h1> About Us Page</h1>
@@ -17,4 +17,4 @@ const Page = () => {
   );
 };
 
-export default Page;
+export default AboutUsPage;
