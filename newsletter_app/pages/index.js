@@ -5,7 +5,7 @@ import styles from "../styles/Home.module.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Home() {
+export default function Home({ title }) {
   return (
     <>
       <Head>
@@ -23,6 +23,8 @@ export default function Home() {
           <a href="/about-us">About Us</a>
         </nav>
       </header>
+
+      <h1> {title} </h1>
 
       <main className={styles.main}>
         <a href="">
@@ -69,4 +71,13 @@ export default function Home() {
       <footer className={styles.footer}> Footer here! </footer>
     </>
   );
+}
+
+export function getServerSideProps() {
+  return {
+    props: {
+      //pass any props that we want our page to have
+      title: "Hello Everyone!",
+    },
+  };
 }
