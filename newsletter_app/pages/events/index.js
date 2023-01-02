@@ -6,7 +6,7 @@ const EventsPage = ({ data }) => {
       <h1> Events Page </h1>
       <div>
         {data.map((ev) => (
-          <a key={ev.id} href={"/events/${ev.id}"}>
+          <a key={ev.id} href={`/events/${ev.id}`}>
             <Image width={300} height={300} alt={ev.title} src={ev.image} />
             <h2>{ev.title}</h2>
           </a>
