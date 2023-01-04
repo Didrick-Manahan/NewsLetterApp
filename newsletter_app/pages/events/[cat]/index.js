@@ -1,17 +1,27 @@
 import Image from "next/image";
+import Link from "next/link";
 
-const EventsCatPage = ({ data }) => {
+const EventsCatPage = ({ data, pageName }) => {
   console.log(data);
   return (
     <div>
-      <h1> Events in {data[0].city}</h1>
+      <h1> Events in {pageName}</h1>
       <div>
         {data.map((ev) => (
-          <a key={ev.id} href={"/events/${ev.city}/${ev.id}"}>
-            <Image width={300} height={300} alt={ev.title} src={ev.image} />
-            <h2>{ev.title}</h2>
-            <p>{ev.description}</p>
-          </a>
+          //client-side navigation in browser
+          //No new html page request needed
+          <Link
+            legacyBehavior
+            key={ev.id}
+            href={`/events/${ev.city}/${ev.id}`}
+            passHref
+          >
+            <a>
+              <Image width={300} height={300} alt={ev.title} src={ev.image} />
+              <h2>{ev.title}</h2>
+              <p>{ev.description}</p>
+            </a>
+          </Link>
         ))}
       </div>
     </div>
@@ -41,7 +51,7 @@ export async function getStaticProps(context) {
   const id = context?.params.cat;
   const { allEvents } = await import("/data/data.json");
   const data = allEvents.filter((ev) => ev.city === id);
-  return { props: { data: data } };
+  return { props: { data: data, pageName: id } };
 }
 
 // *out1*
